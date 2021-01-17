@@ -16,7 +16,7 @@ Feature flags are used often on projects that follows a continuos integration ap
 
 If you are reading this post probably you already have a Django project where you want to start using features flags.
 
-Recently I did a research of libraries to implement feature flags on django and I found a couple of options but I decided to use django-waffle because the setup it's very simple and you can start creating flags imediatly
+Recently I did a research of libraries to implement feature flags on django and I found a couple of options but I decided to use django-waffle because the setup it's very simple and you can start creating flags immediatly
 
 ## Set up of django waffle
 
@@ -59,12 +59,12 @@ Let me explain you the most important fields on this form:
 - **Percent**: the percent of users that will be affected by this rule, in my case 50%
 - **Superusers**: True if you want to apply this flag to all the superusers
 - **Staff**: True if you want to apply this flag to all the staff members
-- **Authenticaded**: True if you want to apply this flag to authenticated users
+- **Authenticated**: True if you want to apply this flag to authenticated users
 - **Notes**: True if you want to apply this flag to authenticated users
 - **Groups**: Select specific user groups to apply the flag
 - **Users**: Select specific users to apply the apply  
 
-## Identifyng if a flag is active in views and templates
+## Identifying if a flag is active in views and templates
 The last step is to apply distinct logics if a flag is enabled, to do that waffle give us some helpers to check if a flag is enabled, for example lets say that we have this view that currently is not sending a sms verification code on signup
 
 {% highlight python %}
