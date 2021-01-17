@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Using feature flags with django waffle | Willbackslash programming</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Using feature flags with django waffle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What’s a feature flag?" />
+<meta property="og:description" content="What’s a feature flag?" />
+<link rel="canonical" href="/django/2021/01/16/using-feature-flags-with-django-waffle.html" />
+<meta property="og:url" content="/django/2021/01/16/using-feature-flags-with-django-waffle.html" />
+<meta property="og:site_name" content="Willbackslash programming" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-16T22:18:56-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using feature flags with django waffle" />
+<script type="application/ld+json">
+{"description":"What’s a feature flag?","headline":"Using feature flags with django waffle","dateModified":"2021-01-16T22:18:56-06:00","url":"/django/2021/01/16/using-feature-flags-with-django-waffle.html","datePublished":"2021-01-16T22:18:56-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"/django/2021/01/16/using-feature-flags-with-django-waffle.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Willbackslash programming</h1>
+        </a>
+        <h2>Hello there! I'm a software engineer from Mexico and in this blog I share my experience working as a software engineer</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>16 January 2021</small>
+<h1>Using feature flags with django waffle</h1>
+
+<p class="view">by </p>
+
+<h2 id="whats-a-feature-flag">What’s a feature flag?</h2>
+
+<p>In simple words a feature flag (feature toggle) is a mechanism to enable or disable a feature on a system without the need of changing environment variables or deploying a new version of the system</p>
+
+<h2 id="common-use-cases-of-feature-flags">Common use cases of feature flags</h2>
+
+<p>Feature flags are used often on projects that follows a continuos integration approach, giving full control of the rolling out new features to production or to experiment with variants of a feature for distinct segments of users</p>
+
+<h2 id="feature-flags-in-django">Feature flags in Django</h2>
+
+<p>If you are reading this post probably you already have a Django project where you want to start using features flags.</p>
+
+<p>Recently I did a research of libraries to implement feature flags on django and I found a couple of options but I decided to use django-waffle because the setup it’s very simple and you can start creating flags imediatly</p>
+
+<h2 id="set-up-of-django-waffle">Set up of django waffle</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>django-waffle
+</code></pre></div></div>
+
+<p>Then add waffle to your installed apps in settings file</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># ...
+</span>    <span class="s">'waffle'</span><span class="p">,</span>
+    <span class="c1"># ...
+</span><span class="p">)</span>
+
+<span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># ...
+</span>    <span class="s">'waffle.middleware.WaffleMiddleware'</span><span class="p">,</span>
+    <span class="c1"># ...
+</span><span class="p">)</span></code></pre></figure>
+
+<p>Check out the <a href="https://waffle.readthedocs.io/en/stable/">Django Waffle docs</a> for more info on how to get the most out of Django Waffle.</p>
+
+
+
+
+  <small>tags: <em></em></small>
+
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>
